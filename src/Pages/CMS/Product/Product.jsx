@@ -19,7 +19,7 @@ const Product = () => {
     // console.log(data.pdata,"pdata");
     useEffect(()=>{
         dispatch(productApi())
-    },[])
+    },[dispatch])
     const handleDlete=(id)=>{
         const formData=new FormData();
         formData.append("id",id)

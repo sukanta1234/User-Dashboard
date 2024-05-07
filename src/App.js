@@ -65,7 +65,7 @@ function App() {
   useEffect(()=>{
     dispatch(check_token())
 
-  },[])
+  },[dispatch])
   return (
     <Suspense fallback={<h1><Loading/></h1>}>
       <Router>

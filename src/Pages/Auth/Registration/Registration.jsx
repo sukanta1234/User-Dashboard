@@ -3,8 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+
 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -205,7 +204,7 @@ export default function Registration() {
               </Grid>
               <Grid item xs={12}>
                 <input type="file" name="profile_pic" id="profile_pic" onChange={handleImage} />
-                {profile_pic!=="" && profile_pic!=null && profile_pic!=undefined?(<>
+                {profile_pic!=="" && profile_pic!==null && profile_pic!==undefined?(<>
                 <img src={URL.createObjectURL(profile_pic)} alt=""  style={{height:"150px"}}/>
                 </>):(<>{profile_pic==="" && <p>drag and drop image here</p>}</>)}
               </Grid>

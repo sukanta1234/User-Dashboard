@@ -18,7 +18,7 @@ const Home = () => {
     console.log(data.data);
     useEffect(()=>{
         dispatch(profile())
-    },[])
+    },[dispatch])
     useEffect(()=>{
       dispatch(resetRediect_To(null))
 

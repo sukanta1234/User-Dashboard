@@ -3,8 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+
 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -13,7 +12,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
 import { createApi } from "../../../Toolkit/productSlice";
 
@@ -158,7 +157,7 @@ export default function Create() {
           
               <Grid item xs={12}>
                 <input type="file" name="image" id="image" onChange={handleImage} />
-                {image!=="" && image!=null && image!=undefined?(<>
+                {image!=="" && image!==null && image!==undefined?(<>
                 <img src={URL.createObjectURL(image)} alt=""  style={{height:"150px"}}/>
                 </>):(<>{image==="" && <p>drag and drop image here</p>}</>)}
               </Grid>
