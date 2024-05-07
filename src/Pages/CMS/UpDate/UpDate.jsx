@@ -23,7 +23,7 @@ const defaultTheme = createTheme();
 
 export default function UpDate() {
   const data = useSelector((state) => state.product);
-  // console.log(data.sdata);
+  // console.log(data.sdata,"sadata");
 
   const { id } = useParams();
   const dispatch = useDispatch();

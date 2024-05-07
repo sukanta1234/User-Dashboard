@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route ,Navigate} from "react-router-dom";
-import { Component, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import Loading from "./Loading";

@@ -11,6 +11,7 @@ export const createApi=createAsyncThunk("/product/create",async(data)=>{
 })
 export const productApi=createAsyncThunk("/product/list",async()=>{
     let response=await axiosInstance.post("/product/list");
+    // console.log(response.data.data,"product APi");
     return response.data.data
 })
 export const deleteApi=createAsyncThunk("/api/product/remove",async(id)=>{

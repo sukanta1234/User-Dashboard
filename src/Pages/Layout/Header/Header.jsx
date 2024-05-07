@@ -20,7 +20,7 @@ import { handleLogOut } from '../../../Toolkit/authSlice';
 
 
 const drawerWidth = 240;
-const navItems = ['Product', 'Contact'];
+const navItems = ['Product'];
 
 export default function Header(props) {
   const dispatch=useDispatch()
@@ -54,7 +54,7 @@ export default function Header(props) {
           </ListItem>
         ))}
         {data.isLoggedIn?(<>
-              <ListItem component={Link} to="/" onClick={hello} sx={{ justifyContent: 'center' }}>
+              <ListItem component={Link} to="/" onClick={(()=>hello())} sx={{ justifyContent: 'center' }}>
                 LogOut
               </ListItem></>):(<>
                 <ListItem component={Link} to="/" sx={{ justifyContent: 'center' }}>
@@ -98,7 +98,7 @@ export default function Header(props) {
               </Button>
             ))}
             {data.isLoggedIn?(<>
-              <Button sx={{ color: '#fff' }} component={Link} to="/" onClick={hello}>
+              <Button sx={{ color: '#fff' }} component={Link} to="/" onClick={(()=>hello())}>
                 LogOut
               </Button></>):(<>
                 <Button sx={{ color: '#fff' }} component={Link} to="/">

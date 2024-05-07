@@ -16,7 +16,7 @@ import Skeleton from 'react-loading-skeleton'
 const Product = () => {
     const dispatch=useDispatch();
     const data=useSelector((state)=>state.product)
-    console.log(data.status);
+    // console.log(data.pdata,"pdata");
     useEffect(()=>{
         dispatch(productApi())
     },[])
