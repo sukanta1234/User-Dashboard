@@ -51,7 +51,7 @@ export default function UpDate() {
   };
   useEffect(() => {
     dispatch(detailsApi(id));
-  }, [dispatch]);
+  }, [dispatch,id]);
   useEffect(() => {
     if (data.sdata) {
       setUser({
