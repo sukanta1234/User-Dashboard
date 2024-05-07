@@ -22,15 +22,18 @@ const Home = lazy(() => import("./Pages/CMS/Home/Home"));
 const Create=lazy(()=>import("./Pages/CMS/Create/Create"))
 const  UpDate=lazy(()=>import("./Pages/CMS/UpDate/UpDate"))
 const Product=lazy(()=>import("./Pages/CMS/Product/Product"))
-function Private({children}) {
-  const token=localStorage.getItem("token") || sessionStorage.getItem("token")
-  return token!=null || token!=undefined?(<>{children}</>):(<>
-  <Navigate to={"/"}/>
-  {toast.error("Login First")}
-  
-  </>)
-  
+function Private({ children }) {
+  const token = localStorage.getItem("token") || sessionStorage.getItem("token");
+  return token !== null && token !== undefined ? (
+    <>{children}</>
+  ) : (
+    <>
+      <Navigate to={"/"} />
+      {toast.error("Login First")}
+    </>
+  );
 }
+
 const publicRoutesName = [
   {
     path: "/",
